@@ -1,0 +1,27 @@
+
+AVRASM ver. 2.1.42  C:\Users\grego\Projects\avr\demoproject.asm Mon Feb 17 23:24:52 2020
+
+
+DEF  ZH           r31
+DEF  ZL           r30
+EQU  PB0          00000001
+EQU  PB2          00000003
+EQU  PB3          00000004
+EQU  PORTB        00000016
+DEF  data_loop_register r28
+CSEG start        00000000
+DSEG smile        0000006a
+CSEG send_data_loop@send_data@43 00000003
+CSEG send_byte    00000007
+DEF  byte_loop_register r29
+DEF  byte_register r0
+CSEG send_word    00000006
+CSEG bitsender    00000009
+CSEG bitsender_loop 0000000a
+CSEG bitsender_skip 0000000f
+EQU  scan_limit   00000000
+EQU  decode_mode  00000002
+EQU  shutdown_mode 00000004
+EQU  test_mode    00000006
+EQU  intensity    00000008
+DSEG commands     00000060
