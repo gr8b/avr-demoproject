@@ -8,7 +8,7 @@
  <SOURCE_FILE>C:\Users\grego\Projects\avr\demoproject.asm</SOURCE_FILE>
  <INCLUDED_FILES>
   <FILE>C:\Users\grego\Projects\avr\attiny12.asm</FILE>
-  <FILE>C:\Users\grego\Projects\avr\woodpecker.macro.asm</FILE>
+  <FILE>C:\Users\grego\Projects\avr\macro.asm</FILE>
   <FILE>C:\Users\grego\Projects\avr\woodpecker.asm</FILE>
  </INCLUDED_FILES>
  <OBJECT_FILES>
@@ -21,13 +21,16 @@
   <FILE>C:\Users\grego\Projects\avr\demoproject.map</FILE>
  </OUTPUT_FILES>
  <LABELS>
-  <start><FILE>C:\Users\grego\Projects\avr\demoproject.asm</FILE><LINE>15</LINE></start>
-  <smile><FILE>C:\Users\grego\Projects\avr\demoproject.asm</FILE><LINE>30</LINE></smile>
-  <bitsender><FILE>C:\Users\grego\Projects\avr\woodpecker.asm</FILE><LINE>19</LINE></bitsender>
-  <send_byte><FILE>C:\Users\grego\Projects\avr\woodpecker.asm</FILE><LINE>15</LINE></send_byte>
-  <send_word><FILE>C:\Users\grego\Projects\avr\woodpecker.asm</FILE><LINE>11</LINE></send_word>
-  <bitsender_loop><FILE>C:\Users\grego\Projects\avr\woodpecker.asm</FILE><LINE>21</LINE></bitsender_loop>
-  <bitsender_skip><FILE>C:\Users\grego\Projects\avr\woodpecker.asm</FILE><LINE>27</LINE></bitsender_skip>
-  <commands><FILE>C:\Users\grego\Projects\avr\woodpecker.asm</FILE><LINE>41</LINE></commands>
+  <RESET><FILE>C:\Users\grego\Projects\avr\demoproject.asm</FILE><LINE>20</LINE></RESET>
+  <start><FILE>C:\Users\grego\Projects\avr\demoproject.asm</FILE><LINE>24</LINE></start>
+  <send_command_word><FILE>C:\Users\grego\Projects\avr\woodpecker.asm</FILE><LINE>8</LINE></send_command_word>
+  <smile><FILE>C:\Users\grego\Projects\avr\demoproject.asm</FILE><LINE>39</LINE></smile>
+  <bitsender><FILE>C:\Users\grego\Projects\avr\woodpecker.asm</FILE><LINE>28</LINE></bitsender>
+  <send_byte><FILE>C:\Users\grego\Projects\avr\woodpecker.asm</FILE><LINE>24</LINE></send_byte>
+  <end><FILE>C:\Users\grego\Projects\avr\demoproject.asm</FILE><LINE>29</LINE></end>
+  <commands><FILE>C:\Users\grego\Projects\avr\woodpecker.asm</FILE><LINE>45</LINE></commands>
+  <send_word><FILE>C:\Users\grego\Projects\avr\woodpecker.asm</FILE><LINE>20</LINE></send_word>
+  <bitsender_loop><FILE>C:\Users\grego\Projects\avr\woodpecker.asm</FILE><LINE>30</LINE></bitsender_loop>
+  <bitsender_skip><FILE>C:\Users\grego\Projects\avr\woodpecker.asm</FILE><LINE>36</LINE></bitsender_skip>
  </LABELS>
 </ASSEMBLER_INFO>

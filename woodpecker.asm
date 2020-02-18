@@ -5,7 +5,16 @@
 .def	byte_register			=	r0
 
 
-
+send_command_word:
+	add		byte_register,byte_register
+	ldi		ZL,low(commands)
+	ldi		ZH,high(commands)
+	add		ZL,byte_register
+	clr		byte_register
+	adc		ZH,byte_register
+;	ld		byte_register,Z
+	lpm
+	inc		ZL
 ; send two bytes from memory at adress Z.
 ;	Z => Z + 2
 send_word:
@@ -13,8 +22,8 @@ send_word:
 ; send one byte from memory at address Z.
 ;	Z => Z + 1
 send_byte:
-	ld		byte_register,Z
-;	lpm		byte_register,Z
+;	ld		byte_register,Z
+	lpm
 	inc		ZL
 bitsender:
 	ldi		byte_loop_register,$8
@@ -31,16 +40,6 @@ bitsender_skip:
 	ret
 
 
-; commands definition.
-.equ	scan_limit		= 0x00
-.equ	decode_mode		= 0x02
-.equ	shutdown_mode	= 0x04
-.equ	test_mode		= 0x06
-.equ	intensity		= 0x08
+
 .dseg
-commands:
-	.dw	0x0b07
-	.dw	0x0900
-	.dw	0x0c01
-	.dw	0x0f00
-	.dw	0x0a00
+commands:	.dw	0x0b07, 0x0900, 0x0c01, 0x0f00, 0x0a00
