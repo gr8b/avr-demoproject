@@ -1,12 +1,12 @@
 .def	data_loop_register		=	r28
 .def	data_loop_index_register =	r27
+
 ; commands definition.
 .equ	scan_limit		= 0x00
 .equ	decode_mode		= 0x02
 .equ	shutdown_mode	= 0x04
 .equ	test_mode		= 0x06
 .equ	intensity		= 0x08
-
 
 ; -----------------------------------------------
 ; send bytes:
