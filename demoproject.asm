@@ -5,7 +5,7 @@
 
 .cseg
 .nolist
-	.include "attiny12.asm"
+	.include "tn12def.inc"
 	.include "macro.asm"
 .list
 
@@ -18,7 +18,10 @@
 
 	.org	0x60
 RESET:
-	
+	; set PORTB pins to output
+	ser		r29
+	out		DDRB,r29
+
 
 ; Magic starts here.
 start:

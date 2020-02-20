@@ -1,7 +1,7 @@
 ; Bojarre special edition.
 ; ATTiny12 8bit power!
 
-.def	temp				= r29
+.def	temp				= r23
 .def	byte_register		= r0
 .def	command_register	= r16
 .def	data_register		= r17

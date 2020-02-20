@@ -1,5 +1,5 @@
-.def	data_loop_register		=	r28
-.def	data_loop_index_register =	r27
+.def	data_loop_register		=	r25
+.def	data_loop_index_register =	r24
 
 .equ	SCAN_LIMIT		= 0x0b
 .equ	MODE_DECODE		= 0x09
