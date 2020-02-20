@@ -22,17 +22,20 @@ RESET:
 
 ; Magic starts here.
 start:
-	send_command	scan_limit
-	send_data	smile, $8
+	send_command	SCAN_LIMIT, 7
+	send_command	MODE_DECODE, 0
+	send_command	MODE_SHUTDOWN, 1
+	send_command	MODE_TEST, 0
+	send_command	INTENSITY, 0
+	send_data		image_data, 8
 
 
 end:
 	rjmp	end
 ; Magic ends here
 
-	.include "woodpecker.asm"
+	.include "portbsender.asm"
 
 
-
-; smile sprite 8x8 pixels
-smile:	.db 0b00100000, 0b01001110, 0b10001110, 0b10000000, 0b10000000, 0b10001110, 0b01001110, 0b00100000
+; image sprite 8x8 pixels
+image_data:	.db 0b00100000, 0b01001110, 0b10001110, 0b10000000, 0b10000000, 0b10001110, 0b01001110, 0b00100000

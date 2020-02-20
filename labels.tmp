@@ -9,7 +9,7 @@
  <INCLUDED_FILES>
   <FILE>C:\Users\grego\Projects\avr\attiny12.asm</FILE>
   <FILE>C:\Users\grego\Projects\avr\macro.asm</FILE>
-  <FILE>C:\Users\grego\Projects\avr\woodpecker.asm</FILE>
+  <FILE>C:\Users\grego\Projects\avr\portbsender.asm</FILE>
  </INCLUDED_FILES>
  <OBJECT_FILES>
   <FILE>C:\Users\grego\Projects\avr\demoproject.obj</FILE>
@@ -23,14 +23,12 @@
  <LABELS>
   <RESET><FILE>C:\Users\grego\Projects\avr\demoproject.asm</FILE><LINE>20</LINE></RESET>
   <start><FILE>C:\Users\grego\Projects\avr\demoproject.asm</FILE><LINE>24</LINE></start>
-  <send_command_word><FILE>C:\Users\grego\Projects\avr\woodpecker.asm</FILE><LINE>9</LINE></send_command_word>
-  <smile><FILE>C:\Users\grego\Projects\avr\demoproject.asm</FILE><LINE>38</LINE></smile>
-  <bitsender><FILE>C:\Users\grego\Projects\avr\woodpecker.asm</FILE><LINE>21</LINE></bitsender>
-  <send_byte><FILE>C:\Users\grego\Projects\avr\woodpecker.asm</FILE><LINE>18</LINE></send_byte>
-  <end><FILE>C:\Users\grego\Projects\avr\demoproject.asm</FILE><LINE>29</LINE></end>
-  <commands><FILE>C:\Users\grego\Projects\avr\woodpecker.asm</FILE><LINE>7</LINE></commands>
-  <send_word><FILE>C:\Users\grego\Projects\avr\woodpecker.asm</FILE><LINE>16</LINE></send_word>
-  <bitsender_loop><FILE>C:\Users\grego\Projects\avr\woodpecker.asm</FILE><LINE>23</LINE></bitsender_loop>
-  <bitsender_skip><FILE>C:\Users\grego\Projects\avr\woodpecker.asm</FILE><LINE>29</LINE></bitsender_skip>
+  <send_word><FILE>C:\Users\grego\Projects\avr\portbsender.asm</FILE><LINE>10</LINE></send_word>
+  <image_data><FILE>C:\Users\grego\Projects\avr\demoproject.asm</FILE><LINE>41</LINE></image_data>
+  <bitsender><FILE>C:\Users\grego\Projects\avr\portbsender.asm</FILE><LINE>22</LINE></bitsender>
+  <send_byte><FILE>C:\Users\grego\Projects\avr\portbsender.asm</FILE><LINE>19</LINE></send_byte>
+  <end><FILE>C:\Users\grego\Projects\avr\demoproject.asm</FILE><LINE>33</LINE></end>
+  <bitsender_loop><FILE>C:\Users\grego\Projects\avr\portbsender.asm</FILE><LINE>24</LINE></bitsender_loop>
+  <bitsender_skip><FILE>C:\Users\grego\Projects\avr\portbsender.asm</FILE><LINE>30</LINE></bitsender_skip>
  </LABELS>
 </ASSEMBLER_INFO>

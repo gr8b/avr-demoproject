@@ -1,12 +1,11 @@
 .def	data_loop_register		=	r28
 .def	data_loop_index_register =	r27
 
-; commands definition.
-.equ	scan_limit		= 0x00
-.equ	decode_mode		= 0x02
-.equ	shutdown_mode	= 0x04
-.equ	test_mode		= 0x06
-.equ	intensity		= 0x08
+.equ	SCAN_LIMIT		= 0x0b
+.equ	MODE_DECODE		= 0x09
+.equ	MODE_SHUTDOWN	= 0x0c
+.equ	MODE_TEST		= 0x0f
+.equ	INTENSITY		= 0x0a
 
 ; -----------------------------------------------
 ; send bytes:
@@ -32,11 +31,12 @@ send_data_loop:
 ; -----------------------------------------------
 ; send command:
 ;	@0	commant to be sent
+;	@1	command argument
 ; -----------------------------------------------
-;	send_command	test_mode
+;	send_command	SCAN_LIMIT,	10
 ; -----------------------------------------------
 .macro	send_command
-	ldi		data_loop_register,@0
-	mov		byte_register,data_loop_register
-	rcall	send_command_word
+	ldi		command_register,@0
+	ldi		data_register,@1
+	rcall	send_word
 .endmacro
