@@ -21,8 +21,10 @@
 	ldi		data_loop_index_register,1
 send_data_loop:
 	mov		byte_register,data_loop_index_register
-	rcall	bitsender
-	rcall	send_byte
+	rcall	write_byte
+	lpm
+	inc		ZL
+	rcall	write_byte
 	inc		data_loop_index_register
 	dec		data_loop_register
 	brne	send_data_loop
@@ -38,5 +40,13 @@ send_data_loop:
 .macro	send_command
 	ldi		command_register,@0
 	ldi		data_register,@1
-	rcall	send_word
+	rcall	write
+.endmacro
+
+.macro	wait
+	ldi		data_loop_register,255
+wait_loop:
+	nop
+	dec		data_loop_register
+	brne	wait_loop
 .endmacro

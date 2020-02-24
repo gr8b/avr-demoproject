@@ -21,17 +21,35 @@ RESET:
 	; set PORTB pins to output
 	ser		r29
 	out		DDRB,r29
+	wait
 
 
 ; Magic starts here.
 start:
-	send_command	SCAN_LIMIT, 7
-	send_command	MODE_DECODE, 0
-	send_command	MODE_SHUTDOWN, 1
-	send_command	MODE_TEST, 0
-	send_command	INTENSITY, 0
-	send_data		image_data, 8
+	cbi				PORTB,clk	// digitalWrite(MAX7219::clk, LOW);
 
+	send_command	0x09, 0x00	// Decode mode: led matrix
+	send_command	0x0a, 0x08	// Intensity 50%
+	send_command	0x0b, 0x07	// Scan limit
+	send_command	0x0c, 0x01	// Shutdown mode: no
+	send_command	0x0f, 0x00	// Display test: no
+
+	send_data		image_data, 8
+/*
+	ldi		ZL,low(test_data*2)
+	ldi  	ZH,high(test_data*2)
+	ldi		data_loop_register,8
+	ldi		data_loop_index_register,1
+send_data_loop:
+	mov		byte_register,data_loop_index_register
+	rcall	write_byte
+	lpm
+	inc		ZL
+	rcall	write_byte
+	inc		data_loop_index_register
+	dec		data_loop_register
+	brne	send_data_loop
+*/
 
 end:
 	rjmp	end
