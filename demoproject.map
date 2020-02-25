@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.1.42  C:\Users\grego\Projects\avr\demoproject.asm Mon Feb 24 20:25:33 2020
+AVRASM ver. 2.1.42  C:\Users\grego\Projects\avr\demoproject.asm Tue Feb 25 17:01:23 2020
 
 
 EQU  SIGNATURE_000 0000001e
@@ -148,19 +148,25 @@ EQU  MODE_SHUTDOWN 0000000c
 EQU  MODE_TEST    0000000f
 EQU  INTENSITY    0000000a
 CSEG RESET        00000060
-CSEG wait_loop@wait@355 00000063
-CSEG start        00000066
+CSEG wait_1s      0000008c
+CSEG start        00000063
 EQU  clk          00000003
 DEF  command_register r16
 DEF  data_register r17
-CSEG write        00000083
-CSEG image_data   00000095
-CSEG send_data_loop@send_data@400 0000007a
-DEF  byte_register r0
-CSEG write_byte   0000008b
-CSEG end          00000082
+CSEG write        00000097
+CSEG clear_leds   00000078
+CSEG test         0000007f
+CSEG end          00000077
+CSEG clear_leds_loop 0000007a
+CSEG loop_main    00000080
+CSEG loop_line    00000081
+CSEG write_byte   0000009f
+CSEG L1           0000008f
 EQU  din          00000002
 EQU  cs           00000004
 DEF  temp         r23
-CSEG write_byte_loop 0000008c
-CSEG write_byte_skip 00000091
+DEF  byte_register r0
+CSEG write_byte_loop 000000a0
+CSEG write_high   000000a5
+CSEG write_low    000000a6
+CSEG image_data   000000ad
