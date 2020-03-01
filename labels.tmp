@@ -24,18 +24,18 @@
   <RESET><FILE>C:\Users\grego\Projects\avr\demoproject.asm</FILE><LINE>20</LINE></RESET>
   <wait_1s><FILE>C:\Users\grego\Projects\avr\demoproject.asm</FILE><LINE>97</LINE></wait_1s>
   <start><FILE>C:\Users\grego\Projects\avr\demoproject.asm</FILE><LINE>29</LINE></start>
-  <write><FILE>C:\Users\grego\Projects\avr\portbsender.asm</FILE><LINE>15</LINE></write>
-  <clear_leds><FILE>C:\Users\grego\Projects\avr\demoproject.asm</FILE><LINE>65</LINE></clear_leds>
-  <test><FILE>C:\Users\grego\Projects\avr\demoproject.asm</FILE><LINE>75</LINE></test>
-  <end><FILE>C:\Users\grego\Projects\avr\demoproject.asm</FILE><LINE>61</LINE></end>
-  <clear_leds_loop><FILE>C:\Users\grego\Projects\avr\demoproject.asm</FILE><LINE>68</LINE></clear_leds_loop>
-  <loop_main><FILE>C:\Users\grego\Projects\avr\demoproject.asm</FILE><LINE>77</LINE></loop_main>
-  <loop_line><FILE>C:\Users\grego\Projects\avr\demoproject.asm</FILE><LINE>79</LINE></loop_line>
-  <write_byte><FILE>C:\Users\grego\Projects\avr\portbsender.asm</FILE><LINE>25</LINE></write_byte>
-  <L1><FILE>C:\Users\grego\Projects\avr\demoproject.asm</FILE><LINE>101</LINE></L1>
-  <write_byte_loop><FILE>C:\Users\grego\Projects\avr\portbsender.asm</FILE><LINE>27</LINE></write_byte_loop>
-  <write_high><FILE>C:\Users\grego\Projects\avr\portbsender.asm</FILE><LINE>33</LINE></write_high>
-  <write_low><FILE>C:\Users\grego\Projects\avr\portbsender.asm</FILE><LINE>35</LINE></write_low>
+  <write><FILE>C:\Users\grego\Projects\avr\portbsender.asm</FILE><LINE>12</LINE></write>
   <image_data><FILE>C:\Users\grego\Projects\avr\demoproject.asm</FILE><LINE>114</LINE></image_data>
+  <write_byte><FILE>C:\Users\grego\Projects\avr\portbsender.asm</FILE><LINE>22</LINE></write_byte>
+  <end><FILE>C:\Users\grego\Projects\avr\demoproject.asm</FILE><LINE>63</LINE></end>
+  <clear_leds><FILE>C:\Users\grego\Projects\avr\demoproject.asm</FILE><LINE>68</LINE></clear_leds>
+  <clear_leds_loop><FILE>C:\Users\grego\Projects\avr\demoproject.asm</FILE><LINE>71</LINE></clear_leds_loop>
+  <test><FILE>C:\Users\grego\Projects\avr\demoproject.asm</FILE><LINE>78</LINE></test>
+  <loop_main><FILE>C:\Users\grego\Projects\avr\demoproject.asm</FILE><LINE>80</LINE></loop_main>
+  <loop_line><FILE>C:\Users\grego\Projects\avr\demoproject.asm</FILE><LINE>82</LINE></loop_line>
+  <L1><FILE>C:\Users\grego\Projects\avr\demoproject.asm</FILE><LINE>101</LINE></L1>
+  <write_byte_loop><FILE>C:\Users\grego\Projects\avr\portbsender.asm</FILE><LINE>24</LINE></write_byte_loop>
+  <write_high><FILE>C:\Users\grego\Projects\avr\portbsender.asm</FILE><LINE>30</LINE></write_high>
+  <write_low><FILE>C:\Users\grego\Projects\avr\portbsender.asm</FILE><LINE>32</LINE></write_low>
  </LABELS>
 </ASSEMBLER_INFO>

@@ -27,7 +27,7 @@ RESET:
 
 ; Magic starts here.
 start:
-	cbi				PORTB,clk	// digitalWrite(MAX7219::clk, LOW);
+	digitalWrite	clk, SET_LOW	// digitalWrite(MAX7219::clk, LOW);
 
 	send_command	0x09, 0x00	// Decode mode: led matrix
 	send_command	0x0a, 0x08	// Intensity 50%
@@ -35,14 +35,16 @@ start:
 	send_command	0x0c, 0x01	// Shutdown mode: no
 	send_command	0x0f, 0x00	// Display test: no
 
-//	send_data		image_data, 8
+	send_data		image_data, 8
+
+/*
+	TEST code
 	
 	rcall	wait_1s
 	rcall	clear_leds
 	rcall	wait_1s
 	rcall	test
 
-/*
 	ldi		ZL,low(test_data*2)
 	ldi  	ZH,high(test_data*2)
 	ldi		data_loop_register,8
@@ -62,6 +64,7 @@ end:
 	rjmp	start
 ; Magic ends here
 
+// TEST code
 clear_leds:
 	ldi		command_register,1
 	ldi		data_register,0
@@ -73,19 +76,16 @@ clear_leds_loop:
 	ret
 
 test:
-	ldi		r26,0
+	ldi		data_register,0
 loop_main:
-	ldi		r27,1
+	ldi		command_register,1
 loop_line:
-	mov		data_register,r27
-	rcall	write_byte
-	mov		data_register,r26
-	rcall	write_byte
-	inc		r27
-	cpi		r27,$09
+	rcall	write
+	inc		command_register
+	cpi		command_register,$09
 	brne	loop_line
 	rcall	wait_1s
-	inc		r26
+	inc		data_register
 	brne	loop_main
 	ret
 

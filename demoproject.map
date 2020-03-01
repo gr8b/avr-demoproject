@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.1.42  C:\Users\grego\Projects\avr\demoproject.asm Tue Feb 25 17:01:23 2020
+AVRASM ver. 2.1.42  C:\Users\grego\Projects\avr\demoproject.asm Sun Mar 01 19:55:59 2020
 
 
 EQU  SIGNATURE_000 0000001e
@@ -147,26 +147,37 @@ EQU  MODE_DECODE  00000009
 EQU  MODE_SHUTDOWN 0000000c
 EQU  MODE_TEST    0000000f
 EQU  INTENSITY    0000000a
-CSEG RESET        00000060
-CSEG wait_1s      0000008c
-CSEG start        00000063
+EQU  din          00000002
 EQU  clk          00000003
+EQU  cs           00000004
+EQU  SET_LOW      00000000
+EQU  SET_HIGH     00000001
+CSEG RESET        00000060
+CSEG wait_1s      00000094
+CSEG start        00000063
+CSEG loop@digitalWrite@381 00000063
 DEF  command_register r16
 DEF  data_register r17
-CSEG write        00000097
-CSEG clear_leds   00000078
-CSEG test         0000007f
-CSEG end          00000077
-CSEG clear_leds_loop 0000007a
-CSEG loop_main    00000080
-CSEG loop_line    00000081
-CSEG write_byte   0000009f
-CSEG L1           0000008f
-EQU  din          00000002
-EQU  cs           00000004
-DEF  temp         r23
+CSEG write        0000009f
+CSEG image_data   000000c7
+CSEG send_data_loop@send_data@427 0000007a
 DEF  byte_register r0
-CSEG write_byte_loop 000000a0
-CSEG write_high   000000a5
-CSEG write_low    000000a6
-CSEG image_data   000000ad
+CSEG write_byte   000000b0
+CSEG end          00000082
+CSEG clear_leds   00000083
+CSEG clear_leds_loop 00000085
+CSEG test         0000008a
+CSEG loop_main    0000008b
+CSEG loop_line    0000008c
+CSEG L1           00000097
+DEF  temp         r23
+CSEG loop@digitalWrite@527 0000009f
+CSEG loop@digitalWrite@545 000000a7
+CSEG loop@digitalWrite@559 000000ab
+CSEG write_byte_loop 000000b1
+CSEG loop@digitalWrite@578 000000b1
+CSEG write_high   000000bc
+CSEG loop@digitalWrite@594 000000b7
+CSEG write_low    000000c0
+CSEG loop@digitalWrite@610 000000bc
+CSEG loop@digitalWrite@625 000000c0

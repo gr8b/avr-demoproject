@@ -7,6 +7,12 @@
 .equ	MODE_TEST		= 0x0f
 .equ	INTENSITY		= 0x0a
 
+.equ	din		= PB2
+.equ	clk		= PB3
+.equ	cs		= PB4
+.equ	SET_LOW		= 0
+.equ	SET_HIGH	= 1
+
 ; -----------------------------------------------
 ; send bytes:
 ;	@0	data address in memory
@@ -43,10 +49,24 @@ send_data_loop:
 	rcall	write
 .endmacro
 
-.macro	wait
-	ldi		data_loop_register,255
-wait_loop:
+
+; -----------------------------------------------
+; set/clear bit in PORTB and wait until PINB bit is set/cleared:
+;	@0	bit number
+;	@1	HIGH/LOW should bit to be set or cleared
+; -----------------------------------------------
+;	digitalWrite	clk, SET_HIGH
+; -----------------------------------------------
+.macro	digitalWrite
+loop:
+	.if	@1>SET_LOW
+	sbi		PORTB,		@0
 	nop
-	dec		data_loop_register
-	brne	wait_loop
+	sbis    PINB,		@0
+	.else
+	cbi		PORTB,		@0
+	nop
+	sbic    PINB,		@0
+	.endif
+	rjmp	loop
 .endmacro
