@@ -24,6 +24,8 @@ RESET:
 	
 	rcall	wait_1s
 
+	.include "audioplayer.asm"
+
 
 ; Magic starts here.
 start:
@@ -108,7 +110,10 @@ L1: dec  r20
 	ret
 
 	.include "portbsender.asm"
+;	.include "audioplayer.asm"
 
 
 ; image sprite 8x8 pixels
 image_data:	.db 0b00100000, 0b01001110, 0b10001110, 0b10000000, 0b10000000, 0b10001110, 0b01001110, 0b00100000
+; song data: tone, length
+song_data:	.db 142, 255, 127, 255, 239, 255, 213, 255, 190, 255, 179, 255, 159, 255, 0, 0

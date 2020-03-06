@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.1.42  C:\Users\grego\Projects\avr\demoproject.asm Sun Mar 01 19:55:59 2020
+AVRASM ver. 2.1.42  C:\Users\grego\Projects\avr\demoproject.asm Fri Mar 06 23:52:27 2020
 
 
 EQU  SIGNATURE_000 0000001e
@@ -153,31 +153,39 @@ EQU  cs           00000004
 EQU  SET_LOW      00000000
 EQU  SET_HIGH     00000001
 CSEG RESET        00000060
-CSEG wait_1s      00000094
-CSEG start        00000063
-CSEG loop@digitalWrite@381 00000063
+CSEG wait_1s      000000a2
+EQU  audio_port   00000018
+EQU  audio_bit    00000000
+DEF  temp1        r20
+DEF  temp2        r21
+CSEG wave_loop    00000064
+CSEG audio_loop_high 00000065
+CSEG audio_loop_low 0000006b
+CSEG start        00000071
+CSEG loop@digitalWrite@423 00000071
 DEF  command_register r16
 DEF  data_register r17
-CSEG write        0000009f
-CSEG image_data   000000c7
-CSEG send_data_loop@send_data@427 0000007a
+CSEG write        000000ad
+CSEG image_data   000000d5
+CSEG send_data_loop@send_data@469 00000088
 DEF  byte_register r0
-CSEG write_byte   000000b0
-CSEG end          00000082
-CSEG clear_leds   00000083
-CSEG clear_leds_loop 00000085
-CSEG test         0000008a
-CSEG loop_main    0000008b
-CSEG loop_line    0000008c
-CSEG L1           00000097
+CSEG write_byte   000000be
+CSEG end          00000090
+CSEG clear_leds   00000091
+CSEG clear_leds_loop 00000093
+CSEG test         00000098
+CSEG loop_main    00000099
+CSEG loop_line    0000009a
+CSEG L1           000000a5
 DEF  temp         r23
-CSEG loop@digitalWrite@527 0000009f
-CSEG loop@digitalWrite@545 000000a7
-CSEG loop@digitalWrite@559 000000ab
-CSEG write_byte_loop 000000b1
-CSEG loop@digitalWrite@578 000000b1
-CSEG write_high   000000bc
-CSEG loop@digitalWrite@594 000000b7
-CSEG write_low    000000c0
-CSEG loop@digitalWrite@610 000000bc
-CSEG loop@digitalWrite@625 000000c0
+CSEG loop@digitalWrite@569 000000ad
+CSEG loop@digitalWrite@587 000000b5
+CSEG loop@digitalWrite@601 000000b9
+CSEG write_byte_loop 000000bf
+CSEG loop@digitalWrite@620 000000bf
+CSEG write_high   000000ca
+CSEG loop@digitalWrite@636 000000c5
+CSEG write_low    000000ce
+CSEG loop@digitalWrite@652 000000ca
+CSEG loop@digitalWrite@667 000000ce
+CSEG song_data    000000d9

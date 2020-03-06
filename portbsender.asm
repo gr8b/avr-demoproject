@@ -10,7 +10,7 @@
 
 
 write:
-	digitalWrite	cs, SET_LOW			;	digitalWrite(MAX7219::cs, LOW);
+	digitalWrite	cs, SET_LOW		;	digitalWrite(MAX7219::cs, LOW);
 	mov		byte_register,command_register
 	rcall	write_byte				;	put(command_register)
 	mov		byte_register,data_register
